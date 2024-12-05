@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מבחן חנוכה</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+            background-image: url('b.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .quiz-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .answers label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .results {
+            margin-top: 20px;
+            display: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>מבחן חנוכה</h1>
+
+    <form id="quizForm">
+        <div class="question">
+            <p>1. כמה ימים נמשך חג החנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="נכון"> 8 ימים</label>
+                <label><input type="radio" name="q1" value="לא נכון"> 7 ימים</label>
+                <label><input type="radio" name="q1" value="לא נכון"> 9 ימים</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. מהי הסיבה לשם "חנוכה"?</p>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="נכון"> כי חנכו את המקדש מחדש</label>
+                <label><input type="radio" name="q2" value="לא נכון"> כי סיימו לקרוא את ספר התורה</label>
+                <label><input type="radio" name="q2" value="לא נכון"> כי הוקמה הרפובליקה היהודית</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. מהו הסמל של חנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="נכון"> סביבון</label>
+                <label><input type="radio" name="q3" value="לא נכון"> חנוכיה</label>
+                <label><input type="radio" name="q3" value="לא נכון"> מנורה</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. מהו מאכל מסורתי בחג החנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="נכון"> סופגניות</label>
+                <label><input type="radio" name="q4" value="לא נכון"> חלה</label>
+                <label><input type="radio" name="q4" value="לא נכון"> פלאפל</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. באיזו עיר התרחש נס החנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q5" value="נכון"> ירושלים</label>
+                <label><input type="radio" name="q5" value="לא נכון"> תל אביב</label>
+                <label><input type="radio" name="q5" value="לא נכון"> חיפה</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>6. איזה חג מתקיים לאחר חנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q6" value="נכון"> ט"ו בשבט</label>
+                <label><input type="radio" name="q6" value="לא נכון"> פסח</label>
+                <label><input type="radio" name="q6" value="לא נכון"> ראש השנה</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>7. באיזה חודש חל חנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q7" value="נכון"> כסלו</label>
+                <label><input type="radio" name="q7" value="לא נכון"> תשרי</label>
+                <label><input type="radio" name="q7" value="לא נכון"> אייר</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>8. באיזו שנה התרחש נס חנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q8" value="נכון"> 164 לפני הספירה</label>
+                <label><input type="radio" name="q8" value="לא נכון"> 70 לפני הספירה</label>
+                <label><input type="radio" name="q8" value="לא נכון"> 100 אחרי הספירה</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>9. מהו שמן החנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q9" value="נכון"> שמן זית</label>
+                <label><input type="radio" name="q9" value="לא נכון"> שמן סויה</label>
+                <label><input type="radio" name="q9" value="לא נכון"> שמן תירס</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>10. איך נקרא המשחק המסורתי של חנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q10" value="נכון"> סביבון</label>
+                <label><input type="radio" name="q10" value="לא נכון"> חידון</label>
+                <label><input type="radio" name="q10" value="לא נכון"> שש-בש</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>11. איזו ברכה מברכים בזמן הדלקת נרות החנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q11" value="נכון"> להדליק נר חנוכה</label>
+                <label><input type="radio" name="q11" value="לא נכון"> על הניסים</label>
+                <label><input type="radio" name="q11" value="לא נכון"> שעשה ניסים</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>12. כמה נרות יש להדליק בחנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q12" value="נכון"> 44 נרות</label>
+                <label><input type="radio" name="q12" value="לא נכון"> 40 נרות</label>
+                <label><input type="radio" name="q12" value="לא נכון"> 38 נרות</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>13. מהו נר החנוכה הנוסף שנמצא על החנוכיה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q13" value="נכון"> השמש</label>
+                <label><input type="radio" name="q13" value="לא נכון"> המנורה</label>
+                <label><input type="radio" name="q13" value="לא נכון"> המלכה</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>14. מהו מספר המשפחות שהיו בקבוצה שניצחו במלחמת החשמונאים?</p>
+            <div class="answers">
+                <label><input type="radio" name="q14" value="נכון"> 2</label>
+                <label><input type="radio" name="q14" value="לא נכון"> 3</label>
+                <label><input type="radio" name="q14" value="לא נכון"> 4</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>15. איזה ספר נכתב בעקבות נס חנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q15" value="נכון"> ספר החשמונאים</label>
+                <label><input type="radio" name="q15" value="לא נכון"> ספר היצירה</label>
+                <label><input type="radio" name="q15" value="לא נכון"> ספר הסיפורים</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>16. מהו היום בו מתחילים לחגוג את חג החנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q16" value="נכון"> כ"ה בכסלו</label>
+                <label><input type="radio" name="q16" value="לא נכון"> כ"ג בכסלו</label>
+                <label><input type="radio" name="q16" value="לא נכון"> ב' בניסן</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>17. באיזה סוג של מקום החלה המרד ביהודה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q17" value="נכון"> במקדש</label>
+                <label><input type="radio" name="q17" value="לא נכון"> בעיר</label>
+                <label><input type="radio" name="q17" value="לא נכון"> בכפר</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>18. איך נקראת העיר שהייתה המרכז של החשמונאים?</p>
+            <div class="answers">
+                <label><input type="radio" name="q18" value="נכון"> ירושלים</label>
+                <label><input type="radio" name="q18" value="לא נכון"> תל אביב</label>
+                <label><input type="radio" name="q18" value="לא נכון"> חיפה</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>19. מהי הדמות המובילה בתנ"ך הקשורה לחג החנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q19" value="נכון"> יהודה המקבי</label>
+                <label><input type="radio" name="q19" value="לא נכון"> דוד המלך</label>
+                <label><input type="radio" name="q19" value="לא נכון"> שלמה המלך</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>20. מהו האור שמסמל את חג החנוכה?</p>
+            <div class="answers">
+                <label><input type="radio" name="q20" value="נכון"> האור של הנס</label>
+                <label><input type="radio" name="q20" value="לא נכון"> האור של השמש</label>
+                <label><input type="radio" name="q20" value="לא נכון"> אור של המנורה</label>
+            </div>
+        </div>
+
+        <button  id="submitQuiz" onclick="calculateResults(event)">שלח תשובות</button>
+        <button id="goToMenu" onclick="p(event)">לחץ כדי לחזור לתפריט</button>
+    </form>
+
+    <div class="results" id="results">
+        <h2>תוצאות המבחן</h2>
+        <p id="score">הציונים: 0/20</p>
+      <br><br> 
+      <button id="c" onclick="nn(event)">
+        לחץ כדי להגיע למסך סיום
+      </button>
+    </div>
+    
+</div>
+
+
+<script>
+document.getElementById("c")
+function nn(event){
+    event.preventDefault(); // מונע רענון דף
+    window.location.href = "ending.html";  // כאן תן את הכתובת של הדף החדש
+}
+    // פונקציה למעבר לדף החדש
+function p(event) {
+    event.preventDefault(); // מונע רענון דף
+    window.location.href = "lobi.html";  // כאן תן את הכתובת של הדף החדש
+}
+
+// פונקציה לחישוב הציונים
+function calculateResults(event) {
+    event.preventDefault(); // מונע רענון דף
+    var score = 0;
+    var totalQuestions = 20;
+    for (var i = 1; i <= totalQuestions; i++) {
+        var question = document.querySelector('input[name="q' + i + '"]:checked');
+        if (question && question.value === "נכון") {
+            score++;
+        }
+    }
+    document.getElementById("score").textContent = "הציונים: " + score + "/" + totalQuestions;
+    document.getElementById("results").style.display = "block";
+}
+
+</script>
+
+</script>
+
+
+</body>
+</html>
